@@ -8,6 +8,6 @@ if __name__ == "__main__":
     # create Flow
     flow = Flow(
         host=config.HOST, protocol=config.PROTOCOL, port_expose=config.PORT
-    ).add(uses=PetBreedClassifier)
+        , cors=True, uvicorn_kwargs={'loop': 'asyncio', 'http': 'httptools'}).add(uses=PetBreedClassifier)
     with flow:
         flow.block()

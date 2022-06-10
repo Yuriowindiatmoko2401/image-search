@@ -1,0 +1,4 @@
+jtype: PetBreedClassifier
+metas:
+  py_modules:
+    - pet_breed_classifier.py

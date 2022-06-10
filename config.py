@@ -1,0 +1,3 @@
+PORT = 12345
+PROTOCOL = "http"
+HOST = "0.0.0.0"

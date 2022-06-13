@@ -1,5 +1,5 @@
 import streamlit as st
-import helper, config
+import helper_imgsearch, config
 import numpy as np
 from jina import Document
 
@@ -29,7 +29,7 @@ def show_pet_and_breed(tags, image):
 
 
 # UI layout
-st.set_page_config(page_title="Jina Pet Breed Classification")
+st.set_page_config(page_title="Image search")
 st.markdown(
     body=helper.UI.css,
     unsafe_allow_html=True,

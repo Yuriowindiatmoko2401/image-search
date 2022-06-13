@@ -1,0 +1,4 @@
+jtype: ImgToImgSearch
+metas:
+  py_modules:
+    - img2img_search.py

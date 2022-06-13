@@ -1,0 +1,11 @@
+FROM jinaai/jina:3-py37-perf
+
+# install requirements before copying the workspace
+COPY gpu_requirements.txt /gpu_requirements.txt
+RUN pip install --default-timeout=1000 --compile -r gpu_requirements.txt
+
+# setup the workspace
+COPY . /workspace
+WORKDIR /workspace
+
+ENTRYPOINT ["jina", "executor", "--uses", "config.yml"]
